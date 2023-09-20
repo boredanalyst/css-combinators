@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Intro to Selectors</title>
+        <style>
+            * {
+                color:black;
+            }
+
+            html {
+                background-color:white;
+            }
+
+            main {
+                display:flex;
+            }
+
+            article {
+                margin:auto;
+            }
+
+            article h1 {
+                font-size:8vh;
+                margin-bottom:0;
+            }
+
+            li {
+                padding:1vh;
+            }
+
+            ol > li {
+                background-color:yellow;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1>Introduction to Combinators</h1>
+                <i>Combinators allow you style particular elements depending on their relationship with other elements.</i>
+                <section>
+                    <h3>Direct Child Combinators</h3>
+                    <p>In the following list, all the items directly under the ordered list are styled.</p>
+                    <p>The direct child combinator styles only the child of a parent within one level of depth.</p>
+                    <p>This means that if a list item is a descendant of the ordered list but they are separated by other elements, these list items will not be styled.</p>
+                    <p>The only unstyled list item is not colored because it is within the unordered list within the ordered list. It is not a direct child.</p>
+                    <section class="sample">
+                        <ol>
+                            <li>I am the first item.</li>
+                                <ul>
+                                    <li>I am an item in an unordered list.</li>
+                                </ul>
+                            <li>I am the second item.</li>
+                            <li>I am the third item.</li>
+                        </ol>
+                    </section>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
